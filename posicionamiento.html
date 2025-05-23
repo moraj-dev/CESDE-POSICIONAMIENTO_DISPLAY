@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Posicionamiento y Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS: Posicionamiento y Display</h1>
+
+      <div class="fixed-box">Fixed</div>
+
+      <div class="section">
+        <h2 class="sticky-header">Propiedad position</h2>
+
+        <h3>position: static (valor por defecto)</h3>
+        <div class="box static-box">Static</div>
+        <p>
+          El elemento sigue el flujo normal del documento. Las propiedades top,
+          right, bottom, left y z-index no tienen efecto.
+        </p>
+
+        <h3>position: relative</h3>
+        <div class="box relative-box">Relative</div>
+        <p>
+          El elemento se posiciona relativamente a su posición normal. Puedes
+          moverlo usando top, right, bottom, left.
+        </p>
+
+        <h3>position: absolute</h3>
+        <div class="absolute-parent">
+          Contenedor relativo
+          <div class="box absolute-box">Absolute</div>
+        </div>
+        <p>
+          El elemento se posiciona relativamente al padre posicionado más
+          cercano (no static). Si no hay ninguno, se usa el body.
+        </p>
+
+        <h3>position: fixed</h3>
+        <p>
+          El elemento (cuadro morado) está fijo en la ventana del navegador, no
+          se mueve al hacer scroll. Mira abajo a la derecha.
+        </p>
+
+        <h3>position: sticky</h3>
+        <p>
+          El encabezado de esta sección tiene position: sticky. Se comporta como
+          relative hasta que alcanza la posición top definida, entonces se queda
+          "pegado".
+        </p>
+        <div
+          style="
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+          "
+        >
+          <div style="height: 400px">
+            Desplázate en este contenedor para ver el comportamiento sticky:
+            <div
+              style="
+                position: sticky;
+                top: 10px;
+                background: #3498db;
+                color: white;
+                padding: 5px;
+              "
+            >
+              Este elemento es sticky dentro de su contenedor
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="sticky-header">Propiedad display</h2>
+
+        <h3>display: block</h3>
+        <div class="box block-box">Block</div>
+        <p>
+          Ocupa todo el ancho disponible y fuerza un salto de línea antes y
+          después.
+        </p>
+
+        <h3>display: inline</h3>
+        <p>
+          Texto normal <span class="box inline-box">Inline</span> continúa en la
+          misma línea. No se puede definir width ni height.
+        </p>
+
+        <h3>display: inline-block</h3>
+        <div class="box inline-block-box">Inline-Block</div>
+        <p>
+          Se muestra en línea pero acepta propiedades de bloque como width y
+          height.
+        </p>
+
+        <h3>display: none</h3>
+        <div class="box hidden-box">Hidden</div>
+        <p>El elemento no se muestra y no ocupa espacio en el layout.</p>
+
+        <h3>visibility: hidden</h3>
+        <div class="box visibility-box">Visibility</div>
+        <p>El elemento no es visible pero sigue ocupando espacio.</p>
+
+        <h3>Ejemplo práctico: navegación</h3>
+        <div class="nav-example">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <p>
+          Los elementos li tienen display: inline-block para crear una
+          navegación horizontal.
+        </p>
+
+        <h3>Ejemplo práctico: cards</h3>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150" alt="Placeholder" />
+          <div class="card-content">
+            <h4>Producto 1</h4>
+            <p>Descripción del producto.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150" alt="Placeholder" />
+          <div class="card-content">
+            <h4>Producto 2</h4>
+            <p>Descripción del producto.</p>
+          </div>
+        </div>
+        <p>
+          Las cards usan display: inline-block para colocarse en línea pero
+          mantener sus dimensiones.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
