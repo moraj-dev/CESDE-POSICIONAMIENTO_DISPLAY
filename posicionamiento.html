@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS - Posicionamiento y Display</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Estilos para las definiciones - Puedes agregarlos al <style> existente */
+      .definition-section {
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+      }
+
+      .definition-box {
+        margin-bottom: 25px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .definition-box h3 {
+        color: #2c3e50;
+        margin-top: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .definition-content {
+        padding: 10px 0;
+      }
+
+      .definition-box code {
+        background-color: #eef2f7;
+        padding: 2px 5px;
+        border-radius: 3px;
+        color: #d35400;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -14,6 +47,13 @@
 
       <div class="section">
         <h2 class="sticky-header">Propiedad position</h2>
+
+        <div class="definition-box">
+        <h3>Propiedad <code>position</code></h3>
+        <div class="definition-content">
+            <p>La propiedad <strong>position</strong> en CSS determina cómo un elemento se ubica en el documento, controlando su flujo de renderizado y relación con otros elementos. Sus valores principales son: <code>static</code> (valor por defecto, sigue el flujo normal), <code>relative</code> (se ajusta respecto a su posición original), <code>absolute</code> (se posiciona respecto a un ancestro no estático), <code>fixed</code> (fijo en la ventana del navegador), y <code>sticky</code> (híbrido entre relative y fixed). Estas propiedades permiten layouts complejos al combinar <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>.</p>
+        </div>
+    </div>
 
         <h3>position: static (valor por defecto)</h3>
         <div class="box static-box">Static</div>
@@ -75,10 +115,18 @@
           </div>
         </div>
       </div>
-
+      <br />
+      <hr />
+      <br />
       <div class="section">
         <h2 class="sticky-header">Propiedad display</h2>
-
+<div class="definition-box">
+        <h3>Propiedad <code>display</code></h3>
+        <div class="definition-content">
+            <p>La propiedad <strong>display</strong> define cómo un elemento se estructura y interactúa en el flujo del documento. Sus valores clave incluyen: <code>block</code> (ocupa todo el ancho y fuerza saltos de línea), <code>inline</code> (fluye con el texto, sin dimensiones modificables), <code>inline-block</code> (mezcla propiedades de ambos), y <code>none</code> (oculta el elemento eliminando su espacio). También controla modelos como <code>flex</code> y <code>grid</code>, siendo fundamental para el diseño responsivo.</p>
+        </div>
+    </div>
+</div>
         <h3>display: block</h3>
         <div class="box block-box">Block</div>
         <p>
